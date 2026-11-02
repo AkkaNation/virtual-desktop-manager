@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    SPDX-FileCopyrightText: 2026 Jos Zant (modified for Virtual Desktop Manager)
+    SPDX-License-Identifier: GPL-2.0-or-later
+    Based on applets/pager/main.xml from KDE plasma-desktop
+-->
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+  <kcfgfile name=""/>
+
+  <group name="General">
+    <entry name="displayedText" type="Enum">
+        <label>The text to show inside the desktop rectangles.</label>
+        <choices>
+            <choice name="Number"/>
+            <choice name="Name"/>
+            <choice name="None"/>
+        </choices>
+        <default>2</default>
+    </entry>
+    <entry name="showWindowOutlines" type="Bool">
+      <label>Whether to show window outlines.</label>
+      <default>true</default>
+    </entry>
+    <entry name="showWindowIcons" type="Bool">
+      <label>Whether to show window icons inside the window rectangles.</label>
+      <default>true</default>
+    </entry>
+    <entry name="showOnlyCurrentScreen" type="Bool">
+      <label>Whether to limit the Pager to the set of windows and the geometry of the screen the widget resides on.</label>
+      <default>false</default>
+    </entry>
+    <entry name="wrapPage" type="Bool">
+        <label>Whether to wrap page when navigating with pager</label>
+        <default>false</default>
+    </entry>
+    <entry name="currentDesktopSelected" type="Enum">
+        <label>What to do on left-mouse click on a desktop rectangle.</label>
+        <choices>
+            <choice name="DoNothing"/>
+            <choice name="ShowDesktop"/>
+        </choices>
+        <default>0</default>
+    </entry>
+    <entry name="pagerLayout" type="Enum">
+        <label>The layout style used for the presentation.</label>
+        <choices>
+            <choice name="Default"/>
+            <choice name="Horizontal"/>
+            <choice name="Vertical"/>
+        </choices>
+        <default>0</default>
+    </entry>
+    <entry name="sizeMode" type="Enum">
+      <label>How the width of each desktop cell is determined.</label>
+      <choices>
+        <choice name="FixedWidth"/>
+        <choice name="FillSpace"/>
+        <choice name="ScreenRatio"/>
+      </choices>
+      <default>0</default>
+    </entry>
+    <entry name="desktopWidth" type="Int">
+      <label>Width of each desktop cell in pixels (fixed width mode).</label>
+      <default>200</default>
+      <min>30</min>
+      <max>1000</max>
+    </entry>
+    <entry name="maxIconSize" type="Int">
+      <label>Maximum size of application icons on window outlines, in pixels.</label>
+      <default>16</default>
+      <min>8</min>
+      <max>128</max>
+    </entry>
+  </group>
+
+</kcfg>
+
+
+
